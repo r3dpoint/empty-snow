@@ -1,105 +1,105 @@
 // For format details, see https://aka.ms/devcontainer.json. For config options, see the
 // README at: https://github.com/devcontainers/templates/tree/main/src/ubuntu
 {
-    "name": "empty-snow",
-    // "build": { "dockerfile": "Dockerfile" },
-    // Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
-    "dockerComposeFile": "docker-compose.yml",
-    "service": "app",
-    "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
-    "features": {
-      // https://github.com/devcontainers/features/tree/main/src/sshd
-      // https://github.com/microsoft/vscode-dev-containers/blob/main/script-library/docs/sshd.md
-    //   "ghcr.io/devcontainers/features/sshd:1": {
-    //     "version": "latest"
-    //   },
-      "ghcr.io/devcontainers/features/common-utils:2": {
-        "configureZshAsDefaultShell": true,
-        "installOhMyZsh": true,
-        "installZsh": true,
-        "upgradePackages": true,
-        "version": "latest",
-        "userGid": "1000",
-        "username": "vscode",
-        "userUid": "1000"
-      },
-    //   "ghcr.io/devcontainers/features/github-cli:1": {},
-      "ghcr.io/devcontainers/features/node:1": {
-        "version": "lts/iron" // node v20
-      },
-      "ghcr.io/devcontainers/features/go:1": {},
-    //   "ghcr.io/devcontainers/features/docker-in-docker:2": {},
-      // "ghcr.io/devcontainers/features/docker-outside-of-docker:1": {},
-    //   "ghcr.io/audacioustux/devcontainers/pack-cli:1": {},
-    //   "ghcr.io/dhoeric/features/google-cloud-cli:1": {},
-    //   "ghcr.io/devcontainers/features/kubectl-helm-minikube:1": {},
-      // Needed for IntelliJ
-    //   "ghcr.io/devcontainers/features/java:1": {
-    //     "version": "17",
-    //     "jdkDistro": "tem",
-    //     "installGradle": true,
-    //     "gradleVersion": "8.5"
-    //   }
+  "name": "empty-snow",
+  // "build": { "dockerfile": "Dockerfile" },
+  // Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
+  "dockerComposeFile": "docker-compose.yml",
+  "service": "app",
+  "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
+  "features": {
+    // https://github.com/devcontainers/features/tree/main/src/sshd
+    // https://github.com/microsoft/vscode-dev-containers/blob/main/script-library/docs/sshd.md
+    // "ghcr.io/devcontainers/features/sshd:1": {
+    // "version": "latest"
+    // },
+    "ghcr.io/devcontainers/features/common-utils:2": {
+      "configureZshAsDefaultShell": true,
+      "installOhMyZsh": true,
+      "installZsh": true,
+      "upgradePackages": true,
+      "version": "latest",
+      "userGid": "1000",
+      "username": "vscode",
+      "userUid": "1000"
     },
-    // Features to add to the dev container. More info: https://containers.dev/features.
-    // "features": {},
-    // Use 'forwardPorts' to make a list of ports inside the container available locally.
-    // Port 2222 needed for SSHD
-    // Port 5432 for Postgres
-    "forwardPorts": [],
-    // Use 'postCreateCommand' to run commands after the container is created.
-    // "postCreateCommand": "uname -a",
-    // Configure tool-specific properties.
-    "customizations": {
-      "vscode": {
-        "settings": {
-          // "editor.defaultFormatter": "esbenp.prettier-vscode",
-          "editor.detectIndentation": true,
-          "editor.formatOnPaste": true,
-          "editor.formatOnSave": true,
-          "editor.formatOnType": true,
-          "editor.insertSpaces": true,
-          "editor.tabSize": 2,
-          "files.insertFinalNewline": true,
-          "git.autofetch": true,
-          "sqltools.connections": [
-            {
-              "name": "postgres",
-              "driver": "PostgreSQL",
-              "previewLimit": 50,
-              "server": "localhost",
-              "port": 5432,
-              "database": "postgres",
-              "username": "postgres",
-              "password": "postgres"
-            }
-          ],
-          //   "java.compile.nullAnalysis.mode": "automatic",
-          //   "kotlin.compiler.jvm.target": "21",
-          "terminal.integrated.cursorStyle": "line"
-        },
-        "extensions": [
-          "davidanson.vscode-markdownlint",
-          "dotenv.dotenv-vscode",
-          "esbenp.prettier-vscode",
-          "firsttris.vscode-jest-runner",
-          "foxundermoon.shell-format",
-          //       "fwcd.kotlin",
-          "ms-azuretools.vscode-docker",
-        //   "ms-vscode.makefile-tools",
-          "mtxr.sqltools-driver-pg",
-          "mtxr.sqltools",
-          // "orta.vscode-jest",
-          "redhat.vscode-yaml",
-          "timonwong.shellcheck"
-  
-          //   "vscjava.vscode-gradle",
-          //   "vscjava.vscode-java-dependency",
-          //   "vscjava.vscode-java-test"
-        ]
-      }
+    // "ghcr.io/devcontainers/features/github-cli:1": {},
+    "ghcr.io/devcontainers/features/node:1": {
+      "version": "lts/iron" // node v20
     },
-    // Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
-    // "remoteUser": "root"
-    "postCreateCommand": "/usr/bin/bash -i .devcontainer/postCreate.sh"
-  }
+    "ghcr.io/devcontainers/features/go:1": {}
+    // "ghcr.io/devcontainers/features/docker-in-docker:2": {},
+    // "ghcr.io/devcontainers/features/docker-outside-of-docker:1": {},
+    // "ghcr.io/audacioustux/devcontainers/pack-cli:1": {},
+    // "ghcr.io/dhoeric/features/google-cloud-cli:1": {},
+    // "ghcr.io/devcontainers/features/kubectl-helm-minikube:1": {},
+    // Needed for IntelliJ
+    // "ghcr.io/devcontainers/features/java:1": {
+    // "version": "17",
+    // "jdkDistro": "tem",
+    // "installGradle": true,
+    // "gradleVersion": "8.5"
+    // }
+  },
+  // Features to add to the dev container. More info: https://containers.dev/features.
+  // "features": {},
+  // Use 'forwardPorts' to make a list of ports inside the container available locally.
+  // Port 2222 needed for SSHD
+  // Port 5432 for Postgres
+  "forwardPorts": [],
+  // Use 'postCreateCommand' to run commands after the container is created.
+  // "postCreateCommand": "uname -a",
+  // Configure tool-specific properties.
+  "customizations": {
+    "vscode": {
+      "settings": {
+        // "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.detectIndentation": true,
+        "editor.formatOnPaste": true,
+        "editor.formatOnSave": true,
+        "editor.formatOnType": true,
+        "editor.insertSpaces": true,
+        "editor.tabSize": 2,
+        "files.insertFinalNewline": true,
+        "git.autofetch": true,
+        "sqltools.connections": [
+          {
+            "name": "postgres",
+            "driver": "PostgreSQL",
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 5432,
+            "database": "postgres",
+            "username": "postgres",
+            "password": "postgres"
+          }
+        ],
+        // "java.compile.nullAnalysis.mode": "automatic",
+        // "kotlin.compiler.jvm.target": "21",
+        "terminal.integrated.cursorStyle": "line"
+      },
+      "extensions": [
+        "davidanson.vscode-markdownlint",
+        "dotenv.dotenv-vscode",
+        "esbenp.prettier-vscode",
+        "firsttris.vscode-jest-runner",
+        "foxundermoon.shell-format",
+        // "fwcd.kotlin",
+        "ms-azuretools.vscode-docker",
+        // "ms-vscode.makefile-tools",
+        "mtxr.sqltools-driver-pg",
+        "mtxr.sqltools",
+        "prisma.prisma",
+        // "orta.vscode-jest",
+        "redhat.vscode-yaml",
+        "timonwong.shellcheck"
+        // "vscjava.vscode-gradle",
+        // "vscjava.vscode-java-dependency",
+        // "vscjava.vscode-java-test"
+      ]
+    }
+  },
+  // Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
+  // "remoteUser": "root"
+  "postCreateCommand": "/usr/bin/bash -i .devcontainer/postCreate.sh"
+}

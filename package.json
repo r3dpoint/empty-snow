@@ -1,0 +1,19 @@
+{
+  "name": "empty-snow",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/r3dpoint/empty-snow.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/r3dpoint/empty-snow/issues"
+  },
+  "homepage": "https://github.com/r3dpoint/empty-snow#readme"
+}
