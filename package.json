@@ -27,11 +27,11 @@
     "./backend"
   ],
   "lint-staged": {
-    "*.{ts,tsx}": [
+    "*.{js,ts,tsx}": [
       "prettier --list-different",
       "eslint --fix"
     ],
-    "*.{json}": [
+    "*.{json, md}": [
       "prettier --write"
     ]
   }
