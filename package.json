@@ -4,16 +4,33 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 0",
+    "pre-commit": "lint-staged",
+    "prepare": "husky"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/r3dpoint/empty-snow.git"
+    "url": "https://github.com/r3dpoint/empty-snow"
   },
-  "author": "",
+  "author": "Naresh Sikha",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/r3dpoint/empty-snow/issues"
   },
-  "homepage": "https://github.com/r3dpoint/empty-snow#readme"
+  "homepage": "https://github.com/r3dpoint/empty-snow#readme",
+  "devDependencies": {
+    "husky": "^9.0.11",
+    "lint-staged": "^15.2.2",
+    "prettier": "^3.2.5"
+  },
+  "workspaces": [
+    "./backend"
+  ],
+  "lint-staged": {
+    "*.ts": [
+      "prettier --list-different",
+      "tsc",
+      "eslint --fix"
+    ]
+  }
 }
