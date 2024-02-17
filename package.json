@@ -28,11 +28,11 @@
   ],
   "lint-staged": {
     "*.{js,ts,tsx}": [
-      "prettier --list-different",
+      "prettier --list-different --write",
       "eslint --fix"
     ],
     "*.{json, md}": [
-      "prettier --write"
+      "prettier --list-different --write"
     ]
   }
 }
