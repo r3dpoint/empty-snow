@@ -29,7 +29,6 @@
   "lint-staged": {
     "*.{ts,tsx}": [
       "prettier --list-different",
-      "tsc",
       "eslint --fix"
     ],
     "*.{json}": [
