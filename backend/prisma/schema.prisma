@@ -11,5 +11,7 @@ datasource db {
 }
 
 model Hero {
-  id String @id
+  id        String   @id @default(uuid())
+  createdAt DateTime @default(now())
+  email     String   @unique
 }

@@ -24,7 +24,8 @@
     "prettier": "^3.2.5"
   },
   "workspaces": [
-    "./backend"
+    "./backend",
+    "./backend-02-event-store"
   ],
   "lint-staged": {
     "*.{js,ts,tsx}": [

@@ -46,7 +46,8 @@
   // Use 'forwardPorts' to make a list of ports inside the container available locally.
   // Port 2222 needed for SSHD
   // Port 5432 for Postgres
-  "forwardPorts": [],
+  // Port 2113 for EventStore
+  "forwardPorts": [2113],
   // Use 'postCreateCommand' to run commands after the container is created.
   // "postCreateCommand": "uname -a",
   // Configure tool-specific properties.
