@@ -32,7 +32,7 @@
       "prettier --list-different --write",
       "eslint --fix"
     ],
-    "*.{json, md}": [
+    "*.{json,md}": [
       "prettier --list-different --write"
     ]
   }
