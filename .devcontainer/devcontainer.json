@@ -48,6 +48,11 @@
   // Port 5432 for Postgres
   // Port 2113 for EventStore
   "forwardPorts": [2113],
+  "portsAttributes": {
+    "2113": {
+      "label": "EventStore"
+    }
+  },
   // Use 'postCreateCommand' to run commands after the container is created.
   // "postCreateCommand": "uname -a",
   // Configure tool-specific properties.
