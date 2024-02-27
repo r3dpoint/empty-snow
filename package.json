@@ -26,6 +26,7 @@
   "workspaces": [
     "./backend",
     "./backend-02-event-store",
+    "./redux-01",
     "./remix-01"
   ],
   "lint-staged": {
