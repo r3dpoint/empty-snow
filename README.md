@@ -13,3 +13,9 @@
 ```bash
 npx npx create-remix@latest --template remix-run/remix/templates/vite-express
 ```
+
+- <https://redux-toolkit.js.org/introduction/getting-started>
+
+```bash
+npx degit reduxjs/redux-templates/packages/vite-template-redux my-app
+```
