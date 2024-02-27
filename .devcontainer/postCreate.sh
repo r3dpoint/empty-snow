@@ -3,4 +3,4 @@
 nvm ls
 
 # https://docs.nestjs.com/
-npm i -g @nestjs/cli
+# npm i -g @nestjs/cli
