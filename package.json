@@ -24,7 +24,7 @@
     "prettier": "^3.2.5"
   },
   "workspaces": [
-    "./redux-01"
+    "./remix-express"
   ],
   "lint-staged": {
     "*.{cjs,js,ts,tsx}": [
