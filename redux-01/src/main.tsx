@@ -1,9 +1,13 @@
 import React from "react"
 import { createRoot } from "react-dom/client"
-import { Provider } from "react-redux"
+import { Provider as ReactReduxProvider } from "react-redux"
 import App from "./App"
 import { store } from "./app/store"
-import "./index.css"
+import {
+  defaultTheme,
+  Provider as ReactSpectrumProvider,
+} from "@adobe/react-spectrum"
+import "./main.css"
 
 const container = document.getElementById("root")
 
@@ -12,9 +16,15 @@ if (container) {
 
   root.render(
     <React.StrictMode>
-      <Provider store={store}>
-        <App />
-      </Provider>
+      <ReactReduxProvider store={store}>
+        <ReactSpectrumProvider
+          theme={defaultTheme}
+          colorScheme="dark"
+          height="100vh"
+        >
+          <App />
+        </ReactSpectrumProvider>
+      </ReactReduxProvider>
     </React.StrictMode>,
   )
 } else {

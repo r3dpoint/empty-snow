@@ -1,5 +1,5 @@
 import { useState } from "react"
-
+import { ActionButton, Text, Content } from "@adobe/react-spectrum"
 import { useAppDispatch, useAppSelector } from "../../app/hooks"
 import styles from "./Counter.module.css"
 import {
@@ -22,28 +22,23 @@ export const Counter = () => {
 
   return (
     <div>
-      <div className={styles.row}>
-        <button
-          className={styles.button}
-          aria-label="Decrement value"
-          onClick={() => dispatch(decrement())}
+      <div>
+        <ActionButton
+          aria-label="decrement"
+          onPress={() => dispatch(decrement())}
         >
-          -
-        </button>
-        <span aria-label="Count" className={styles.value}>
-          {count}
-        </span>
-        <button
-          className={styles.button}
-          aria-label="Increment value"
-          onClick={() => dispatch(increment())}
+          <Text>-</Text>
+        </ActionButton>
+        <Text>{count}</Text>
+        <ActionButton
+          aria-label="increment"
+          onPress={() => dispatch(increment())}
         >
-          +
-        </button>
+          <Text>+</Text>
+        </ActionButton>
       </div>
-      <div className={styles.row}>
+      <div>
         <input
-          className={styles.textbox}
           aria-label="Set increment amount"
           value={incrementAmount}
           type="number"
@@ -51,21 +46,16 @@ export const Counter = () => {
             setIncrementAmount(e.target.value)
           }}
         />
-        <button
-          className={styles.button}
-          onClick={() => dispatch(incrementByAmount(incrementValue))}
-        >
+        <button onClick={() => dispatch(incrementByAmount(incrementValue))}>
           Add Amount
         </button>
         <button
-          className={styles.asyncButton}
           disabled={status !== "idle"}
           onClick={() => dispatch(incrementAsync(incrementValue))}
         >
           Add Async
         </button>
         <button
-          className={styles.button}
           onClick={() => {
             dispatch(incrementIfOdd(incrementValue))
           }}

@@ -24,10 +24,7 @@
     "prettier": "^3.2.5"
   },
   "workspaces": [
-    "./backend",
-    "./backend-02-event-store",
-    "./redux-01",
-    "./remix-01"
+    "./redux-01"
   ],
   "lint-staged": {
     "*.{cjs,js,ts,tsx}": [
